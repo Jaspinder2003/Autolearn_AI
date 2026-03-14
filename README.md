@@ -1,10 +1,10 @@
-# 🧠 AutoLearner AI — Self-Learning Image Classifier
+#  AutoLearner AI — Self-Learning Image Classifier
 
 A self-learning image classification system that **autonomously identifies unknown objects** by combining a CNN classifier with reverse image search and web scraping. When the model encounters an image it can't confidently classify, it searches the web, identifies the object, scrapes training data, and retrains itself — all without human intervention.
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Self-Expanding Knowledge** — Automatically learns new object categories it hasn't seen before
 - **Reverse Image Search** — Uses Yandex and Bing to identify unknown images via visual similarity
@@ -16,7 +16,7 @@ A self-learning image classification system that **autonomously identifies unkno
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 self_learning_ai/
@@ -37,7 +37,7 @@ self_learning_ai/
 
 ---
 
-## 🔄 How It Works
+## How It Works
 
 ```
 ┌─────────────┐     Low Confidence     ┌──────────────────────┐
@@ -71,7 +71,7 @@ self_learning_ai/
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component              | Technology                                              |
 |------------------------|---------------------------------------------------------|
@@ -85,7 +85,7 @@ self_learning_ai/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -138,7 +138,7 @@ save_images(urls, "golden retriever")
 
 ---
 
-## 📊 Model Architecture
+## Model Architecture
 
 ### CNN Classifier (TensorFlow)
 
@@ -159,7 +159,7 @@ A dynamic architecture that starts with a base number of convolutional blocks an
 
 ---
 
-## 🔬 Research Notes
+## Research Notes
 
 - **Out-of-Distribution (OOD) Detection** is used to determine when an image doesn't belong to any known class. Methods considered include maximum softmax scoring, Mahalanobis distance, and Monte Carlo Dropout.
 - **Known Limitation:** The model may exhibit overconfidence on similar-looking objects (e.g., a toy boat vs. a real boat), leading to ineffective retraining cycles.
@@ -167,12 +167,19 @@ A dynamic architecture that starts with a base number of convolutional blocks an
 
 ---
 
-## 📝 License
+## License
 
 This project is for educational and research purposes.
 
 ---
 
-## 🤝 Contributing
+## Contributing
+
+this repo shows a copy of project developed in a team consisting of
+-Tauheed Ali
+-Bazhao Wang
+-Aditya Mulunjkar
+-Jaspinder Singh Maan
+-Alvish Prasla
 
 Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
