@@ -1,0 +1,33 @@
+- main aspect:
+    - program self learns through webscraping for images it cannot clasify or is unsure of
+    - when webscraping it uses googles image similarity search and then takes the most common word from the page as the object
+    - you can double check by searching up the word and checking if it is a noun (not in mvp)
+
+- how it will work:
+    - run a file that runs the model, when model comes across something it cannot recognize for certain it is then sent to the webscrapper
+    - the webscrapper will analyze image as mentioned in the main aspect section
+    - the webscrapper will then download images of that type from google to train on
+
+
+- desired outcomes, the AI is able to learn and start recognizing the test set with above 70% accuracy
+
+- optional additions:
+    - look into how changes in the network structure can improve accuracy
+
+
+Methods to determine when an object is not in the data set:
+
+- Out Of Distribution (OOD) detection method:
+    - Method 1: use the maximum softmax score as a confidence measure, if it falls below a certain thresh-hold then its
+     not from the data set
+    - Method 2: Distance based measures (Mahalanobis Distance, K-Nearest Neighbors)
+    - Method 3: Monte Carlo Dropout
+
+    How to evaluate the success of OOD detection
+    - using the normal distribution of the images and the model's confidence (chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://arxiv.org/pdf/2409.07940v1)
+    - can use this to double check models work
+
+- Expected limitations with OOD and model:
+    - Overconfidence predictions
+    - ex: looks at toy boat, has low confidence, searches on internet for data on boat, re trains on same data, nothing changes
+    - is there a way to just add a class to the training instead of re-training on all classes
